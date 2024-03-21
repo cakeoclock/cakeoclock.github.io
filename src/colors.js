@@ -1,4 +1,4 @@
-export const OPTION = 0;
+export const OPTION = 1;
 
 export const COLORS = [
   {
@@ -7,6 +7,13 @@ export const COLORS = [
     primary: "#DF336E",
     secondary: "#ECC189",
     accent: "#E4D953",
+  },
+  {
+    text: "#0F0B05",
+    background: "#FBF7F0",
+    primary: "#C27B00",
+    secondary: "#E6C488",
+    accent: "#E4B666",
   },
 ];
 

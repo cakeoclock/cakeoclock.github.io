@@ -1,12 +1,37 @@
-import logo from './logo.svg';
-import './App.css';
-import Navbar from './Navbar';
-import MenuCard from './MenuCard';
+import "./App.css";
+import Titlebar from "./Titlebar";
+import Categories from "./Categories";
+import { Navbar } from "react-bootstrap";
+import { COLOR } from "./colors";
+import Footer from "./Footer";
 
 function App() {
   return (
     <>
-    <Navbar></Navbar>
+      <div
+        style={{
+          backgroundColor: COLOR.background,
+          height: "100%",
+          display: "flex",
+          flexDirection: "column",
+        }}
+      >
+        <Titlebar></Titlebar>
+        <br></br>
+        <Categories></Categories>
+
+        <Navbar
+          fixed="bottom"
+          style={{
+            backgroundColor: COLOR.secondary,
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+          }}
+        >
+          <Footer></Footer>
+        </Navbar>
+      </div>
     </>
   );
 }
