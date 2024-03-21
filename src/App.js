@@ -17,9 +17,12 @@ function App() {
         }}
       >
         <Titlebar></Titlebar>
-        <br></br>
+        {/* <br></br> */}
         <Categories></Categories>
-
+        <br></br>
+        <br></br>
+        <br></br>
+        <br></br>
         <Navbar
           fixed="bottom"
           style={{
