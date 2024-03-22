@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/cakeoclock.github.io/static/css/main.e6dc821b.css",
-    "main.js": "/cakeoclock.github.io/static/js/main.e656a6d7.js",
-    "static/js/453.7b5e0b03.chunk.js": "/cakeoclock.github.io/static/js/453.7b5e0b03.chunk.js",
-    "index.html": "/cakeoclock.github.io/index.html",
-    "main.e6dc821b.css.map": "/cakeoclock.github.io/static/css/main.e6dc821b.css.map",
-    "main.e656a6d7.js.map": "/cakeoclock.github.io/static/js/main.e656a6d7.js.map",
-    "453.7b5e0b03.chunk.js.map": "/cakeoclock.github.io/static/js/453.7b5e0b03.chunk.js.map"
+    "main.css": "/static/css/main.e6dc821b.css",
+    "main.js": "/static/js/main.19607aef.js",
+    "static/js/453.7b5e0b03.chunk.js": "/static/js/453.7b5e0b03.chunk.js",
+    "index.html": "/index.html",
+    "main.e6dc821b.css.map": "/static/css/main.e6dc821b.css.map",
+    "main.19607aef.js.map": "/static/js/main.19607aef.js.map",
+    "453.7b5e0b03.chunk.js.map": "/static/js/453.7b5e0b03.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.e6dc821b.css",
-    "static/js/main.e656a6d7.js"
+    "static/js/main.19607aef.js"
   ]
 }
