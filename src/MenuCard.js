@@ -2,15 +2,15 @@ import { Container, Row, Col, Card } from "react-bootstrap";
 
 function MenuCard() {
   const items = [
-    { id: 1, name: "Item 1", image: "img/c1.jpg" },
-    { id: 2, name: "Item 2", image: "img/c2.jpg" },
-    { id: 3, name: "Item 3", image: "img/c1.jpg" },
-    { id: 4, name: "Item 4", image: "img/c2.jpg" },
-    { id: 5, name: "Item 5", image: "img/c1.jpg" },
-    { id: 6, name: "Item 6", image: "img/c2.jpg" },
-    { id: 7, name: "Item 7", image: "img/c1.jpg" },
-    { id: 8, name: "Item 8", image: "img/c2.jpg" },
-    { id: 9, name: "Item 9", image: "img/c1.jpg" },
+    { id: 1, name: "Item 1", image: "img/c1.jpg", price: 399 },
+    { id: 2, name: "Item 2", image: "img/c2.jpg", price: 199 },
+    { id: 3, name: "Item 3", image: "img/c1.jpg", price: 99 },
+    { id: 4, name: "Item 4", image: "img/c2.jpg", price: 299},
+    { id: 5, name: "Item 5", image: "img/c1.jpg", price: 399 },
+    { id: 6, name: "Item 6", image: "img/c2.jpg", price: 199 },
+    { id: 7, name: "Item 7", image: "img/c1.jpg", price: 499 },
+    { id: 8, name: "Item 8", image: "img/c2.jpg", price: 599 },
+    { id: 9, name: "Item 9", image: "img/c1.jpg", price: 999 },
   ];
   return (
     <>

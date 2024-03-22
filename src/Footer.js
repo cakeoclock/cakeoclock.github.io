@@ -1,4 +1,4 @@
-import { Container, Row, Col, Button, Stack } from "react-bootstrap";
+import { Container, Button, Stack } from "react-bootstrap";
 
 function Footer() {
   return (
