@@ -1,4 +1,3 @@
-import { COLOR } from "./colors";
 import { Container, Tabs, Tab } from "react-bootstrap";
 import MenuCard from "./MenuCard";
 
@@ -7,12 +6,12 @@ function Categories() {
     <>
       <Container >
         <Tabs
-          defaultActiveKey="cakes"
+          defaultActiveKey="cream"
           id="justify-tab-example"
           className="mb-3"
           justify
         >
-          <Tab eventKey="cakes" title="Cakes">
+          <Tab eventKey="cream" title="Cream Cakes">
             <MenuCard category={0}></MenuCard>
           </Tab>
           <Tab eventKey="dry" title="Dry Cakes">

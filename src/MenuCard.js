@@ -1,10 +1,18 @@
-import { Container, Row, Col, Card } from "react-bootstrap";
+import { Container, Row, Col, Card, Modal } from "react-bootstrap";
 import React, { useState, useEffect } from "react";
 import * as XLSX from "xlsx";
 import OfferBanner from "./OfferBanner";
 
 function MenuCard({ category }) {
   const [data, setData] = useState([]);
+  const [showDetails, setShowDetails] = useState(false);
+  const [productDetails, setProductDetails] = useState({});
+
+  const handleCloseDetails = () => setShowDetails(false);
+  const handleShowDetails = (productData) => {
+    setShowDetails(true);
+    setProductDetails(productData);
+  };
 
   useEffect(() => {
     const fetchData = async () => {
@@ -28,7 +36,10 @@ function MenuCard({ category }) {
         <Row>
           {data.map((product) => (
             <Col xs={12} sm={6} md={4} lg={3} key={product.id} className="mb-4">
-              <Card style={{ height: "100%" }}>
+              <Card
+                style={{ height: "100%" }}
+                onClick={() => handleShowDetails(product)}
+              >
                 <Card.Img
                   variant="top"
                   src={`img/${product.image}`}
@@ -95,7 +106,6 @@ function MenuCard({ category }) {
                   >
                     {product.priceFor}
                   </Card.Text>
-                  
                 </Card.Body>
                 {product.onDiscount === "yes" ? (
                   product.discountPercent != null ? (
@@ -119,6 +129,51 @@ function MenuCard({ category }) {
           ))}
         </Row>
       </Container>
+      <Modal
+        show={showDetails}
+        onHide={handleCloseDetails}
+        aria-labelledby="contained-modal-title-vcenter"
+        centered
+      >
+        <Modal.Header closeButton>
+          <Modal.Title id="contained-modal-title-vcenter">
+            {productDetails.name}
+          </Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
+          <Card.Img
+            variant="top"
+            src={`img/${productDetails.image}`}
+            alt={productDetails.name}
+            style={{ width: "100%", height: "100%", objectFit: "cover" }}
+          />
+          {productDetails.inStock === "no" && (
+            <div
+              style={{
+                position: "absolute",
+                top: 0,
+                left: 0,
+                width: "100%",
+                height: "100%",
+                backgroundColor: "rgba(0, 0, 0, 0.5)", // Adjust background color and transparency as needed
+                color: "white", // Adjust text color as needed
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+                fontSize: "20px", // Adjust font size as needed
+              }}
+            >
+              Out of Stock
+            </div>
+          )}
+          <p>
+            {productDetails.description}
+          </p>
+        </Modal.Body>
+        {/* <Modal.Footer>
+          <Button >Close</Button>
+        </Modal.Footer> */}
+      </Modal>
     </>
   );
 }
