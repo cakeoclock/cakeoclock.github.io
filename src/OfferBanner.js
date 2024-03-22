@@ -1,14 +1,14 @@
 import { Container, Button, Stack } from "react-bootstrap";
 
-function Footer() {
+function OfferBanner({offer}) {
   return (
     <>
 
-        <Stack gap={3}>
-          <div style={{ textAlign: "center" }}>
-            <h7>Place your order now.</h7>
+        {/* <Stack gap={3}> */}
+          <div style={{ textAlign: "center", width:"100%", backgroundColor:"gold" }}>
+            <h7> {offer} </h7>
           </div>
-          <div style={{ textAlign: "center" }}>
+          {/* <div style={{ textAlign: "center" }}>
             <Container fluid>
               <Button variant="outline-dark">
                 <img
@@ -29,10 +29,10 @@ function Footer() {
                 />{" "}
                 +91 9876543210</Button>
             </Container>
-          </div>
-        </Stack>
+          </div> */}
+        {/* </Stack> */}
     </>
   );
 }
 
-export default Footer;
+export default OfferBanner;

@@ -21,6 +21,9 @@ function Categories() {
           <Tab eventKey="pastries" title="Pastries">
             <MenuCard></MenuCard>
           </Tab>
+          <Tab eventKey="sweet" title="Sweet Delights">
+            <MenuCard></MenuCard>
+          </Tab>
         </Tabs>
       </Container>
     </>
