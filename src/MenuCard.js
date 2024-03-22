@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react";
 import * as XLSX from "xlsx";
 import OfferBanner from "./OfferBanner";
 
-function MenuCard() {
+function MenuCard({ category }) {
   const [data, setData] = useState([]);
 
   useEffect(() => {
@@ -12,7 +12,7 @@ function MenuCard() {
       const arrayBuffer = await response.arrayBuffer(); // Convert the data to an array buffer
       const workbook = XLSX.read(arrayBuffer, { type: "buffer" }); // Read the Excel file
 
-      const worksheetName = workbook.SheetNames[0]; // Or whatever sheet you need
+      const worksheetName = workbook.SheetNames[category]; // Or whatever sheet you need
       const worksheet = workbook.Sheets[worksheetName];
 
       const json = XLSX.utils.sheet_to_json(worksheet); // Convert sheet to JSON
@@ -35,7 +35,7 @@ function MenuCard() {
                   alt={product.name}
                   style={{ width: "100%", height: "200px", objectFit: "cover" }}
                 />
-                {product.inStock === "no" && ( 
+                {product.inStock === "no" && (
                   <div
                     style={{
                       position: "absolute",
@@ -67,12 +67,14 @@ function MenuCard() {
                           <Card.Text className="d-flex justify-content-start align-items-center m-0">
                             <span>
                               ₹
-                              {product.price *
-                                (1 - product.discountPercent / 100).toFixed(2)}
+                              {Math.round(
+                                product.price *
+                                  (1 - product.discountPercent / 100)
+                              )}
                             </span>{" "}
                             <span
                               className="text-danger"
-                              style={{ marginLeft: "16px" }}
+                              style={{ marginLeft: "8px", fontSize: "12px" }}
                             >
                               <s>₹{product.price}</s>
                             </span>
@@ -82,14 +84,20 @@ function MenuCard() {
                     ) : (
                       <>
                         {" "}
-                        <Card.Text className="mt-0">₹{product.price}</Card.Text>
+                        <Card.Text className="m-0">₹{product.price}</Card.Text>
                       </>
                     )
                   ) : (
                     <>
-                      <Card.Text className="mt-0">₹{product.price}</Card.Text>
+                      <Card.Text className="m-0">₹{product.price}</Card.Text>
                     </>
                   )}
+                  <Card.Text
+                    className="m-0"
+                    style={{ color: "gray", fontSize: "12px" }}
+                  >
+                    {product.priceFor}
+                  </Card.Text>
                 </Card.Body>
                 {product.onDiscount === "yes" ? (
                   product.discountPercent != null ? (

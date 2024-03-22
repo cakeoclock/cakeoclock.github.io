@@ -8,17 +8,20 @@ import Footer from "./Footer";
 function App() {
   return (
     <>
-      <div
+      
+        
+        <div
         style={{
           backgroundColor: COLOR.background,
-          height: "100%",
+          minHeightheight: "100vh",
           display: "flex",
           flexDirection: "column",
         }}
       >
         <Titlebar></Titlebar>
         {/* <br></br> */}
-        <Categories></Categories>
+        <Categories ></Categories>
+        
         <br></br>
         <br></br>
         <br></br>
@@ -34,7 +37,7 @@ function App() {
         >
           <Footer></Footer>
         </Navbar>
-      </div>
+        </div>
     </>
   );
 }

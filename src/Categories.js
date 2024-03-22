@@ -13,16 +13,16 @@ function Categories() {
           justify
         >
           <Tab eventKey="cakes" title="Cakes">
-            <MenuCard></MenuCard>
+            <MenuCard category={0}></MenuCard>
           </Tab>
           <Tab eventKey="dry" title="Dry Cakes">
-            <MenuCard></MenuCard>
+            <MenuCard category={1}></MenuCard>
           </Tab>
           <Tab eventKey="pastries" title="Pastries">
-            <MenuCard></MenuCard>
+            <MenuCard category={2}></MenuCard>
           </Tab>
           <Tab eventKey="sweet" title="Sweet Delights">
-            <MenuCard></MenuCard>
+            <MenuCard category={3}></MenuCard>
           </Tab>
         </Tabs>
       </Container>
