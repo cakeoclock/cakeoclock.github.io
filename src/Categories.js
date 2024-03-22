@@ -4,7 +4,7 @@ import MenuCard from "./MenuCard";
 function Categories() {
   return (
     <>
-      <Container >
+      <Container>
         <Tabs
           defaultActiveKey="cream"
           id="justify-tab-example"
@@ -13,6 +13,10 @@ function Categories() {
         >
           <Tab eventKey="cream" title="Cream Cakes">
             <MenuCard category={0}></MenuCard>
+            <p style={{ textAlign: "center" }}>
+              All types of customized theme cakes available. Price charged
+              accordingly.
+            </p>
           </Tab>
           <Tab eventKey="dry" title="Dry Cakes">
             <MenuCard category={1}></MenuCard>
@@ -24,6 +28,9 @@ function Categories() {
             <MenuCard category={3}></MenuCard>
           </Tab>
         </Tabs>
+        <p style={{ textAlign: "center" }}>
+              Home delivery available. Delivery charge (₹30 - ₹50) according to distance or free take away.
+            </p>
       </Container>
     </>
   );
