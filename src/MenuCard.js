@@ -56,9 +56,6 @@ function MenuCard({ category }) {
                 )}
                 <Card.Body>
                   <Card.Title className="mb-0">{product.name}</Card.Title>
-                  {/* <Card.Text className="mb-0">{product.description}</Card.Text> */}
-                  {/* <Card.Text className="mt-0">₹{product.price}</Card.Text> */}
-                  {/* Add more details or buttons here */}
                   {product.onDiscount === "yes" ? (
                     product.discountPercent != null ? (
                       <>
@@ -98,6 +95,7 @@ function MenuCard({ category }) {
                   >
                     {product.priceFor}
                   </Card.Text>
+                  
                 </Card.Body>
                 {product.onDiscount === "yes" ? (
                   product.discountPercent != null ? (

@@ -10,6 +10,7 @@ function Footer() {
           </div>
           <div style={{ textAlign: "center" }}>
             <Container fluid>
+            <a href="tel:+919876543210" style={{ textDecoration: 'none' }}>
               <Button variant="outline-dark">
                 <img
                   alt=""
@@ -19,7 +20,8 @@ function Footer() {
                   className="d-inline-block align-top"
                 />{" "}
                 +91 9876543210
-              </Button>{" "}
+              </Button></a>{" "}
+              <a href="https://wa.me/919876543210" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none' }}>
               <Button variant="outline-dark"><img
                   alt=""
                   src="/img/whatsapp.svg"
@@ -27,7 +29,7 @@ function Footer() {
                   height="20"
                   className="d-inline-block align-top"
                 />{" "}
-                +91 9876543210</Button>
+                +91 9876543210</Button></a>
             </Container>
           </div>
         </Stack>
