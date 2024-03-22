@@ -46,6 +46,23 @@ function MenuCard({ category }) {
                   alt={product.name}
                   style={{ width: "100%", height: "200px", objectFit: "cover" }}
                 />
+                <div
+                  style={{
+                    position: "absolute",
+                    top: 0,
+                    left: 0,
+                    width: "24",
+                    height: "24",
+                  }}
+                >
+                  <img
+                    alt="Logo"
+                    src="/img/veg.png"
+                    width="24"
+                    height="24"
+                    className="me-2" // Adjust 'me-2' for more or less spacing
+                  />
+                </div>
                 {product.inStock === "no" && (
                   <div
                     style={{
@@ -166,9 +183,7 @@ function MenuCard({ category }) {
               Out of Stock
             </div>
           )}
-          <p>
-            {productDetails.description}
-          </p>
+          <p>{productDetails.description}</p>
         </Modal.Body>
         {/* <Modal.Footer>
           <Button >Close</Button>
