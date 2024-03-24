@@ -8,9 +8,7 @@ import Footer from "./Footer";
 function App() {
   return (
     <>
-      
-        
-        <div
+      <div
         style={{
           backgroundColor: COLOR.background,
           minHeightheight: "100vh",
@@ -20,8 +18,23 @@ function App() {
       >
         <Titlebar></Titlebar>
         {/* <br></br> */}
-        <Categories ></Categories>
-        
+        <Categories></Categories>
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+          }}
+        >
+          <img
+            alt="Logo"
+            src="/img/fssai.svg"
+            width="64"
+            height="64"
+            className="me-2" // Adjust 'me-2' for more or less spacing
+          />{" "}
+          Certified
+        </div>
         <br></br>
         <br></br>
         <br></br>
@@ -37,7 +50,7 @@ function App() {
         >
           <Footer></Footer>
         </Navbar>
-        </div>
+      </div>
     </>
   );
 }

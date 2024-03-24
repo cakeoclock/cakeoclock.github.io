@@ -56,11 +56,11 @@ function MenuCard({ category }) {
                   }}
                 >
                   <img
-                    alt="Logo"
+                    alt="Veg"
                     src="/img/veg.png"
                     width="24"
                     height="24"
-                    className="me-2" // Adjust 'me-2' for more or less spacing
+                    className="m-1" // Adjust 'me-2' for more or less spacing
                   />
                 </div>
                 {product.inStock === "no" && (
