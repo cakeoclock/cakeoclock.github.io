@@ -31,7 +31,7 @@ function App() {
             src="/img/fssai.svg"
             width="64"
             height="64"
-            className="me-2" // Adjust 'me-2' for more or less spacing
+            className="me-2" 
           />{" "}
           Certified
         </div>
