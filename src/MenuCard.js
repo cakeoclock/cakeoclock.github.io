@@ -28,7 +28,7 @@ function MenuCard({ category }) {
     };
 
     fetchData();
-  }, []);
+  }, [category]);
 
   return (
     <>
