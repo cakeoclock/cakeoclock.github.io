@@ -1,6 +1,7 @@
 import "./App.css";
 import Titlebar from "./Titlebar";
 import Categories from "./Categories";
+import { Route, Routes, Link } from 'react-router-dom';
 import { Navbar, Nav, Container } from "react-bootstrap";
 import { COLOR } from "./colors";
 import Footer from "./Footer";
@@ -18,7 +19,7 @@ function App() {
       >
         <Navbar style={{ backgroundColor: COLOR.secondary }}>
           <Container>
-            <Navbar.Brand href="/">
+            <Navbar.Brand as={Link} to="/">
               <img
                 alt="Logo"
                 src="/img/logo.png"
@@ -28,14 +29,18 @@ function App() {
               />
             </Navbar.Brand>
             <Nav className="me-auto" style={{ color: COLOR.text, fontSize:"20px", fontWeight:"bold" }}>
-              <Nav.Link href="/">Cakes</Nav.Link>
-              <Nav.Link href="gallery">Photo Gallery</Nav.Link>
+              <Nav.Link as={Link} to="/">Cakes</Nav.Link>
+              <Nav.Link as={Link} to="gallery">Photo Gallery</Nav.Link>
             </Nav>
           </Container>
         </Navbar>
         <Titlebar></Titlebar>
         {/* <br></br> */}
         <Categories></Categories>
+        <Routes>
+          <Route path="/" element={<Categories />} />
+          <Route path="/gallery" element={<Categories />} />
+        </Routes>
         <div
           style={{
             display: "flex",
