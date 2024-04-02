@@ -1,7 +1,7 @@
 import "./App.css";
 import Titlebar from "./Titlebar";
 import Categories from "./Categories";
-import { Navbar } from "react-bootstrap";
+import { Navbar, Nav, Container } from "react-bootstrap";
 import { COLOR } from "./colors";
 import Footer from "./Footer";
 
@@ -16,6 +16,23 @@ function App() {
           flexDirection: "column",
         }}
       >
+        <Navbar style={{ backgroundColor: COLOR.secondary }}>
+          <Container>
+            <Navbar.Brand href="/">
+              <img
+                alt="Logo"
+                src="/img/logo.png"
+                width="48"
+                height="48"
+                className="me-2" // Adjust 'me-2' for more or less spacing
+              />
+            </Navbar.Brand>
+            <Nav className="me-auto" style={{ color: COLOR.text, fontSize:"20px", fontWeight:"bold" }}>
+              <Nav.Link href="/">Cakes</Nav.Link>
+              <Nav.Link href="gallery">Photo Gallery</Nav.Link>
+            </Nav>
+          </Container>
+        </Navbar>
         <Titlebar></Titlebar>
         {/* <br></br> */}
         <Categories></Categories>
@@ -31,7 +48,7 @@ function App() {
             src="/img/fssai.svg"
             width="64"
             height="64"
-            className="me-2" 
+            className="me-2"
           />{" "}
           Certified
         </div>
