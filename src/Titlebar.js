@@ -1,5 +1,5 @@
 import { COLOR } from "./colors";
-import { Container, Navbar } from "react-bootstrap";
+import { Container } from "react-bootstrap";
 
 function Titlebar() {
   return (

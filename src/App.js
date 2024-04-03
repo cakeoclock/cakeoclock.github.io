@@ -5,6 +5,7 @@ import { Route, Routes, Link } from 'react-router-dom';
 import { Navbar, Nav, Container } from "react-bootstrap";
 import { COLOR } from "./colors";
 import Footer from "./Footer";
+import Gallery from "./Gallery";
 
 function App() {
   return (
@@ -36,10 +37,10 @@ function App() {
         </Navbar>
         <Titlebar></Titlebar>
         {/* <br></br> */}
-        <Categories></Categories>
+        {/* <Categories></Categories> */}
         <Routes>
           <Route path="/" element={<Categories />} />
-          <Route path="/gallery" element={<Categories />} />
+          <Route path="/gallery" element={<Gallery />} />
         </Routes>
         <div
           style={{
