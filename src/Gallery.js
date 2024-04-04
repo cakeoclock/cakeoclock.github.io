@@ -7,20 +7,20 @@ function Gallery() {
       <Container>
         <Row>
           {images.map((image, index) => (
-            <Col xs={6} md={4} lg={3} key={index} className="mb-4">
+            <Col xs={6} sm={6} md={4} lg={3} key={index} className="mb-4">
               <img
                 src={`/gallery/${image}`}
                 alt={`Gallery ${index}`}
-                style={{ width: "100%", height: "200px" }}
+                style={{ width: "100%", height: "200px", objectFit: "cover" }}
               />
             </Col>
           ))}
         </Row>
 
-        <p style={{ textAlign: "center" }}>
+        {/* <p style={{ textAlign: "center" }}>
           Home delivery available. Delivery charge (₹30 - ₹50) according to
           distance or free take away.
-        </p>
+        </p> */}
       </Container>
     </>
   );
