@@ -49,7 +49,7 @@ function Gallery() {
         <Modal.Body>
           <Image
             variant="top"
-            src={`img/${productDetails}`}
+            src={`/gallery/${productDetails}`}
             alt={productDetails}
             style={{ width: "100%", height: "100%", objectFit: "cover" }}
           />
