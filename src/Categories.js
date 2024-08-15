@@ -29,8 +29,8 @@ function Categories() {
           </Tab>
         </Tabs>
         <p style={{ textAlign: "center" }}>
-              Free home delivery available. 
-              {/* Delivery charge (₹30 - ₹50) according to distance or free take away. */}
+              {/* Free home delivery available.  */}
+              Delivery charge (₹30 - ₹50) according to distance or free take away.
             </p>
       </Container>
     </>
